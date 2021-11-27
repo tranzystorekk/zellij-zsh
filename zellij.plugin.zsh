@@ -10,8 +10,7 @@ _is_zellij_running() {
 
 if _is_zellij_cmd_available && ! _is_zellij_running; then
     function _zellij_autostart() {
-        zellij attach -c main
-        exit 0
+        exec zellij
     }
 
     autoload -Uz add-zsh-hook
