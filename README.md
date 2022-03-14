@@ -21,6 +21,14 @@ zplug "tranzystorek-io/zellij-zsh"
 
 Then, run `zplug install` and restart your terminal.
 
+### [sheldon](https://github.com/rossmacarthur/sheldon)
+
+Run:
+
+```console
+sheldon add --github tranzystorek-io/zellij-zsh zellij-zsh
+```
+
 ## Configuration
 
 ### Disable when in Visual Studio Code
