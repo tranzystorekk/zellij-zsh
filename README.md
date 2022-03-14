@@ -20,3 +20,14 @@ zplug "tranzystorek-io/zellij-zsh"
 ```
 
 Then, run `zplug install` and restart your terminal.
+
+## Configuration
+
+### Disable when in Visual Studio Code
+
+To disable running `zellij` when in a Visual Studio Code Terminal, use the `ZELLIJ_ZSH_DISABLE_VSCODE` variable:
+
+```shell
+# in your .zshenv file
+export ZELLIJ_ZSH_DISABLE_VSCODE=true
+```

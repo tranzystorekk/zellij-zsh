@@ -8,7 +8,11 @@ _is_zellij_running() {
     [[ -v ZELLIJ ]]
 }
 
-if _is_zellij_cmd_available && ! _is_zellij_running; then
+_is_vscode_disabled() {
+    [[ "$ZELLIJ_ZSH_DISABLE_VSCODE" = "true" && "$TERM_PROGRAM" = "vscode" ]]
+}
+
+if _is_zellij_cmd_available && ! _is_zellij_running && ! _is_vscode_disabled; then
     function _zellij_autostart() {
         exec zellij
     }
