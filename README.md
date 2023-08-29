@@ -31,11 +31,20 @@ sheldon add --github tranzystorek-io/zellij-zsh zellij-zsh
 
 ## Configuration
 
-### Disable when in Visual Studio Code
+### `ZELLIJ_ZSH_DISABLE_VSCODE`
 
-To disable running `zellij` when in a Visual Studio Code Terminal, use the `ZELLIJ_ZSH_DISABLE_VSCODE` variable:
+Disables this plugin if running in a Visual Studio Code Terminal:
 
 ```shell
 # in your .zshenv file
-export ZELLIJ_ZSH_DISABLE_VSCODE=true
+export ZELLIJ_ZSH_DISABLE_VSCODE=1
+```
+
+### `ZELLIJ_ZSH_DEBUG_MODE`
+
+Enables additional debug logs in `zellij`:
+
+```shell
+# in your .zshenv file
+export ZELLIJ_ZSH_DEBUG_MODE=1
 ```
