@@ -31,6 +31,15 @@ sheldon add --github tranzystorek-io/zellij-zsh zellij-zsh
 
 ## Configuration
 
+### `ZELLIJ_ZSH_DISABLE_PLUGIN`
+
+Disables this plugin:
+
+```shell
+# in your .zshenv file
+export ZELLIJ_ZSH_DISABLE_PLUGIN=1
+```
+
 ### `ZELLIJ_ZSH_DISABLE_VSCODE`
 
 Disables this plugin if running in a Visual Studio Code Terminal:
