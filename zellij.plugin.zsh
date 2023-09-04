@@ -18,7 +18,15 @@ _is_vscode_disabled() {
     _is_config_enabled DISABLE_VSCODE && [[ "$TERM_PROGRAM" = "vscode" ]]
 }
 
-if _is_zellij_cmd_available && ! _is_zellij_running && ! _is_vscode_disabled; then
+_is_plugin_disabled() {
+    _is_config_enabled DISABLE_PLUGIN || _is_vscode_disabled
+}
+
+_main() {
+    if ! is_zellij_cmd_available || _is_zellij_running || _is_plugin_disabled; then
+        return 0
+    fi
+
     _args=()
     if _is_config_enabled DEBUG_MODE; then
         _args+=("--debug")
@@ -30,4 +38,6 @@ if _is_zellij_cmd_available && ! _is_zellij_running && ! _is_vscode_disabled; th
 
     autoload -Uz add-zsh-hook
     add-zsh-hook precmd _zellij_autostart
-fi
+}
+
+_main
