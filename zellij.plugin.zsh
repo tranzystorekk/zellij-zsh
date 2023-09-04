@@ -23,7 +23,7 @@ _is_plugin_disabled() {
 }
 
 _main() {
-    if ! is_zellij_cmd_available || _is_zellij_running || _is_plugin_disabled; then
+    if ! _is_zellij_cmd_available || _is_zellij_running || _is_plugin_disabled; then
         return 0
     fi
 
