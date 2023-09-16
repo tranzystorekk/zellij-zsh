@@ -28,10 +28,6 @@ _main() {
     fi
 
     _args=()
-    if _is_config_enabled ATTACH_EXISTING; then
-        _args+=("attach" "--create")
-    fi
-
     if _is_config_enabled DEBUG_MODE; then
         _args+=("--debug")
     fi
