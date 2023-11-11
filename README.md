@@ -2,6 +2,8 @@
 
 ## About
 
+This project has been moved to [Codeberg](https://codeberg.org/tranzystorekk/zellij.zsh).
+
 A small zsh plugin for autostarting [Zellij](https://zellij.dev/)
 as your terminal multiplexer.
 
